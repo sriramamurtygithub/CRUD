@@ -1,0 +1,133 @@
+
+.crud{
+  height:70px;
+  width:100%;
+  background-color: rgb(8, 100, 136);
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+.crud-text{
+  font-size: 40px;
+  font-weight:bolder;
+  margin-left: 5px;
+}
+.input-box{
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 2px;
+  margin-top: 15px;
+  width:500px;
+  padding: 15px;
+}
+#name{
+  width:480px;
+  height:25px;
+  font-size: 20px;
+  
+}
+.fullname{
+  font-size: 28px;
+  font-weight: bold;
+}
+#studentid{
+  width:480px;
+  height:25px;
+  font-size: 20px; 
+  
+}
+.studentID{
+  font-size: 28px;
+  font-weight:bold;
+}
+.idbox{
+  margin-top: 15px;
+}
+#dob{
+  width:480px;
+  height:25px;
+  font-size: 20px;
+  
+
+}
+.submitbox{
+  margin-top: 30px;
+}
+.resetbtn{
+  height: 40px;
+  width:100px;
+  font-size: 28px;
+  background-color: rgb(123, 211, 246) ;
+  border-radius: 5px;
+  border-width: 1.5px;
+}
+#submitbutton{
+  height: 40px;
+  width:100px;
+  font-size: 28px;
+  background-color: rgb(123, 211, 246) ;
+  border-radius: 5px;
+  border-width: 1.5px;
+}
+#submitbutton:hover {
+  background-color: rgb(52, 154, 187);
+}
+#submitbutton:active{
+  background-color: rgb(123, 211, 246) ;
+}
+.resetbtn:hover {
+  background-color: rgb(52, 154, 187) ;
+}
+.resetbtn:active{
+  background-color: rgb(123, 211, 246) ;
+}
+.table-box{
+  float: right;
+  margin-top: -318px;
+  margin-right: 20px;
+}
+.table-box th {
+  width: 160px;
+  height: 45px;
+  font-size: 26px;
+  
+}
+.table-box td{
+  
+  font-size: 24px;
+}
+.edit-button{
+  height: 30px;
+  width: 65px;
+  font-size: 24px;
+  background-color: rgb(123, 211, 246) ;
+  border-radius: 5px;
+  border-width: 1.5px;
+  margin-top: 5px;
+}
+.delete-button{
+  height: 30px;
+  width: 85px;
+  font-size: 24px;
+  background-color: rgb(123, 211, 246) ;
+  border-radius: 5px;
+  border-width: 1.5px;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+.edit-button:hover{
+  background-color: rgb(52, 154, 187);
+}
+.edit-button:active{
+  background-color: rgb(123, 211, 246); 
+}
+.delete-button:hover{
+  background-color: rgb(52, 154, 187);
+}
+.delete-button:active{
+  background-color: rgb(123, 211, 246); 
+}
+
+
+

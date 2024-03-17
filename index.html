@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+  <div class="crud"><p class="crud-text">CRUD</p></div>
+<div class="input-box">
+  
+  <form id="studentform">
+    <div>
+      <label class="fullname" for="name">Full Name:</label> <br>
+      <input type="text" id="name" placeholder="Sriramamurty Yallapragada" required minlength="1" >
+    </div>
+
+    <div class="idbox">
+      <label class="studentID" for="studentid">StudentID:</label> <br>
+      <input type="text" id="studentid" placeholder="0123456789" required minlength="10" maxlength="10" >
+    </div>
+
+    <div class="idbox">
+      <label class="studentID" for="studentid">DOB:</label> <br>
+      <input type="date" class="dob" id="dob" placeholder="0123456789" required minlength="10" maxlength="10" >
+    </div>
+
+
+    <div class="submitbox">
+      <input class="resetbtn" type="reset">
+      <input id="submitbutton" type="submit">
+    </div>
+  </form>
+</div>
+
+<div class="table-box">
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>DOB</th>
+        <th>Action</th>
+       </tr>
+    </thead>
+    <tbody id="studentTable">
+    
+    </tbody>
+  
+   
+  </table>
+
+  
+
+</div>
+
+<script>
+  document.getElementById("studentform").addEventListener("submit",function(event){
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var studentID = document.getElementById("studentid").value;
+    var dob = document.getElementById("dob").value;
+
+    var newRow = document.createElement("tr");
+
+    var nameCell = document.createElement("td");
+    var idCell = document.createElement("td");
+    var dobcell = document.createElement("td");
+
+    var editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.className = "edit-button";
+
+    var deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete-button";
+    
+    deleteButton.addEventListener("click", function(){
+      alert("Are You Sure you want to delete this");
+      newRow.remove();
+    });
+
+    nameCell.textContent = name;
+    idCell.textContent = studentID;
+    dobcell.textContent = dob;
+
+    newRow.appendChild(nameCell);
+    newRow.appendChild(idCell);
+    newRow.appendChild(dobcell);
+    newRow.appendChild(editButton);
+    newRow.appendChild(deleteButton);
+
+    editButton.addEventListener("click", function(){
+      newRow.remove();
+      document.getElementById("name").value=name;
+      document.getElementById("studentid").value=studentID;
+      document.getElementById("dob").value=dob;
+
+    });
+
+    document.getElementById("studentTable").append(newRow);
+
+    document.getElementById("name").value = "";
+    document.getElementById("studentid").value = "";
+    document.getElementById("dob").value = "";
+
+
+  });
+
+
+</script>  
+</body>
+</html>
